@@ -1,0 +1,39 @@
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    perspective-origin: -170%;
+    /* perspective: 550px;  */
+    /* Perspectiva para el efecto de profundidad */
+  }
+  
+  .card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden; 
+    transition: transform 1.5s;
+    background-color:rgba(43, 12, 72, 0.329);
+    /* Ocultar la cara trasera de la tarjeta */
+  }
+  
+  .card-back {
+    transform: rotateX(180deg); 
+    /* transition: transform 0.8s; */
+  }
+  
+  .card-flipped .card-front {
+    transform: rotateX(-180deg); 
+    /* transition: transform 0.8s  */
+    /* Rotar la cara frontal */
+  }
+  
+  .card-flipped .card-back {
+    transform: rotateX(0deg) ;
+        /* transition: transform 0.8s; */
+   
+    /* Mostrar la cara trasera */
+  }
